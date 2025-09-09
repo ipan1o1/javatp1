@@ -4,11 +4,9 @@ public class hjms {
 
     public static void time(int secondes){
         int jours = secondes / 86400;
-        secondes = secondes - jours * 86400;
-        int heures = secondes / 3600;
-        secondes = secondes - heures * 3600;
-        int minutes = secondes / 60;
-        secondes = secondes - minutes * 60;
+        int heures = (secondes % 86400) / 3600;
+        int minutes = (secondes % 3600) / 60;
+        secondes %= 60;
         System.out.print("Cette durée équivaut à " + jours + " jour(s) "+ heures + " heure(s) " + minutes + " minute(s) " + secondes + " seconde(s).");
     }
     public static void main(String[] args) {
