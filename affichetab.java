@@ -7,9 +7,20 @@ public class affichetab {
         }
         System.out.print("]");
     }
+
+    public static void increment(int[] t){
+        for(int i=1; i <= t.length; i++){
+            t[i-1] ++;
+        }
+    }
     
     public static void main(String[] args) {
         int[] t = {12, 5 ,84, 9};
+        int[] t2 = t;
+        t2[2] = 67;
+        affiche(t, 4);
+        affiche(t2, 4);
+        increment(t);
         affiche(t, 4);
     }
 }
